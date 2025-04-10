@@ -65,6 +65,35 @@
   .animate-word-fade-in .word.delay-3 {
     animation-delay: 3s;
   }
+
+   /* Keyframe animation for smooth transition */
+  @keyframes image-fade {
+    0% {
+      opacity: 0;
+    }
+    33% {
+      opacity: 1;
+    }
+    66% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Apply animation for the image slider */
+  .animate-image-fade img:nth-child(1) {
+    animation: image-fade 9s infinite 0s;
+  }
+  
+  .animate-image-fade img:nth-child(2) {
+    animation: image-fade 9s infinite 3s;
+  }
+
+  .animate-image-fade img:nth-child(3) {
+    animation: image-fade 9s infinite 6s;
+  }
 </style>
 
 
@@ -201,6 +230,21 @@ style="background-image: url('assest/img/nav3bg.svg'); background-size: 200% aut
       </div>
     </div>
   </div>
+
+ <!-- Image Slider (Move it visually to the top) -->
+  <div class="relative flex justify-center md:justify-start mt-10 md:mt-12 lg:mt-6">
+    <!-- Second Card -->
+    <div class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 md:top-[-65rem] md:left-[57rem] sm:top-0 top-0"
+      style="transform: translateY(-40px); z-index: 20;">
+    <!-- Image Slider -->
+    <div class="absolute w-full h-full animate-image-fade">
+      <img src="assest/img/boywithteeth.svg" alt="Boy with Teeth" class="w-full h-full object-cover absolute top-0 left-0">
+      <img src="assest/img/boyimage2.svg" alt="Boy Image 2" class="w-full h-full object-cover absolute top-0 left-0 opacity-0">
+      <img src="assest/img/boyimag3.svg" alt="Boy Image 3" class="w-full h-full object-cover absolute top-0 left-0 opacity-0">
+    </div>
+  </div>
+</div>
+
 
 </section>
 
