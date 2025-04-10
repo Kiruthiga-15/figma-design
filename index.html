@@ -27,6 +27,44 @@
   .animate-silver {
     animation: silverFloat 4s ease-in-out infinite;
   }
+  /* explorenow */
+    /* Keyframe animation to show words one by one */
+  @keyframes wordFadeIn {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Apply animation to each word with delays */
+  .animate-word-fade-in .word {
+    animation: wordFadeIn 4s infinite;
+    opacity: 0;
+  }
+
+  .animate-word-fade-in .word.delay-0 {
+    animation-delay: 0s;
+  }
+
+  .animate-word-fade-in .word.delay-1 {
+    animation-delay: 1s;
+  }
+
+  .animate-word-fade-in .word.delay-2 {
+    animation-delay: 2s;
+  }
+
+  .animate-word-fade-in .word.delay-3 {
+    animation-delay: 3s;
+  }
 </style>
 
 
@@ -70,7 +108,6 @@
   class="hidden absolute top-full left-0 w-full px-4 py-6 flex-row space-x-4 space-y-0 items-center justify-center text-center md:static md:flex-row md:space-y-0 md:space-x-6 md:items-center md:justify-center md:bg-transparent md:flex md:w-auto md:p-0 md:relative md:text-inherit"
 style="background-image: url('assest/img/nav3bg.svg'); background-size: 200% auto; background-position: center; background-repeat: no-repeat;">
 
-  
   <a href="#" class="hover:text-blue-300 text-sm md:text-base">Service</a>
   <a href="#" class="hover:text-blue-300 text-sm md:text-base">About Us</a>
   <a href="#" class="hover:text-blue-300 text-sm md:text-base">Contact Us</a>
@@ -87,35 +124,68 @@ style="background-image: url('assest/img/nav3bg.svg'); background-size: 200% aut
     </header>
    
   <!-- ✅ HERO SECTION -->
-  <section class="py-20 px-4 md:px-8 lg:px-16">
+<section class="py-20 px-4 md:px-8 lg:px-16 relative">
 
-      <!-- Text Block -->
-      <div class="flex justify-center md:justify-end mb-10">
-        <div class="max-w-3xl text-center md:text-left">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
-            Providing Quality <br>
-            Dental Care for Your <br>
-            Family
-          </h1>
-        </div>
-      </div>
- 
-<div class="flex justify-center mt-10 md:mt-12 lg:mt-6">
-  <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem]">
-    
-    <!-- White teeth (Silver - moves after gold) -->
-    <img src="assest/img/whiteteeth.svg" alt="White Teeth"
-      class="absolute -top-5 left-8 sm:-top-4 sm:left-12 md:-top-8 md:left-14 lg:-top-10 lg:left-20 w-full h-full object-contain opacity-90 z-0 animate-silver">
-    
-    <!-- Gold teeth (moves first) -->
-    <img src="assest/img/goldteeth.svg" alt="Gold Teeth"
-      class="relative w-full h-full object-contain z-10 animate-gold">
+  <!-- Text Block -->
+  <div class="flex justify-center md:justify-end mb-10">
+    <div class="max-w-3xl text-center md:text-left">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+        Providing Quality <br>
+        Dental Care for Your <br>
+        Family
+      </h1>
+    </div>
   </div>
+
+  <!-- Teeth Images Section -->
+  <div class="flex justify-center mt-10 md:mt-12 lg:mt-6">
+    <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] lg:w-[28rem] lg:h-[28rem] xl:w-[30rem] xl:h-[30rem]">
+    
+      <!-- White teeth (Silver - moves after gold) -->
+      <img src="assest/img/whiteteeth.svg" alt="White Teeth"
+        class="absolute -top-8 left-8 sm:-top-4 sm:left-12 md:-top-8 md:left-14 lg:-top-10 lg:left-20 w-full h-full object-contain opacity-90 z-0 animate-silver">
+    
+      <!-- Gold teeth (moves first) -->
+      <img src="assest/img/goldteeth.svg" alt="Gold Teeth"
+        class="relative w-full h-full object-contain z-10 animate-gold -top-4">
+    </div>
+  </div>
+
+ <!-- Card Section Inside the Div (Reduced size, moved up) -->
+<div class="relative flex justify-center md:justify-start mt-10 md:mt-12 lg:mt-6">
+
+    <!-- Card -->
+    <div class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 md:-top-[35rem] sm:top-0 top-0"
+      style="transform: translateY(-40px); z-index: 20;">
+
+      <!-- Overlay for the Card -->
+      <div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+
+      <!-- Animated Text -->
+      <div class="absolute top-10 left-6 text-white text-2xl sm:text-3xl font-semibold z-10 animate-word-fade-in">
+        <span class="word delay-0">Discover</span>
+        <span class="word delay-1">Your</span>
+        <span class="word delay-2">Perfect</span>
+        <span class="word delay-3">Smile</span>
+      </div>
+
+      <!-- Button at the bottom -->
+      <div class="absolute bottom-6 left-6 z-10">
+        <button class="bg-white hover:bg-gray-100 text-black px-6 py-2 rounded-md">
+          Explore Now
+        </button>
+      </div>
+    </div>
 </div>
 
 
+</section>
 
-      </section>
+
+
+
+
+
 
 
 
