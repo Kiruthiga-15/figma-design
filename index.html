@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toothsens - Dental Care</title>
+  <script src="https://cdn.tailwindcss.com"></script> <!-- Include Tailwind CSS CDN -->
+<style>
+  /* Gold & Silver Tooth Animation */
+@keyframes bounceToothGold {
+  0%   { transform: translateY(0); }
+  10%  { transform: translateY(-60px); } /* Gold goes higher */
+  40%  { transform: translateY(-60px); }
+  80%  { transform: translateY(-60px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes bounceToothSilver {
+  0%   { transform: translateY(0); }
+  40%  { transform: translateY(0); } 
+  50%  { transform: translateY(-30px); } /* Silver less bounce */
+  80%  { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+
+.animate-gold {
+  animation: bounceToothGold 7s infinite ease-in-out;
+}
+
+.animate-silver {
+  animation: bounceToothSilver 7s infinite ease-in-out;
+}
+
+
+  /* Fade Animation for Boy Images 3 images*/
+@keyframes fade1 {
+  0% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fade2 {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  35% { opacity: 1; }
+  60% { opacity: 1; }
+  70% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fade3 {
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  70% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.img1 {
+  position: absolute;
+  animation: fade1 9s infinite ease-in-out;
+}
+
+.img2 {
+  position: absolute;
+  animation: fade2 9s infinite ease-in-out;
+}
+
+.img3 {
+  position: absolute;
+  animation: fade3 9s infinite ease-in-out;
+}
+
+  /* explore now key frame  */
+
+@keyframes fadeInWords {
+  0%   { opacity: 0; transform: translateY(10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  30%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+.word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInWords 6s infinite ease-in-out;
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+  /* 2nd explore now  */
+@keyframes fadeInWords {
+  0%   { opacity: 0; transform: translateY(10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  30%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+.word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInWords 6s infinite ease-in-out;
+}
+
+.delay-0 { animation-delay: 0s; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+</style>
+
+</head>
+
+<body class="bg-blue-900 text-white">
+<!-- ✅ BG Wrapper for Header + Hero -->
+<div class="bg-[url('assest/img/sesion1bg.svg')] bg-no-repeat bg-cover bg-center text-white w-full h-[787.4px]">
+
+    <!-- ✅ HEADER with centered background nav links -->
+    <header class="flex flex-wrap items-center justify-between px-4 py-4 md:px-8">
+        <!-- ✅ Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="assest/img/logoteeth.svg" alt="Toothsens Logo" class="h-10">
+        </div>
+
+        <!-- ✅ Nav links with background -->
+      <div class="relative flex-1 flex justify-center">
+    <div class="w-96 h-20 bg-[url('assest/img/nav3bg.svg')] bg-no-repeat bg-contain bg-center px-6 py-2 flex items-center space-x-6">
+        <a href="#" class="hover:text-blue-300">Service</a>
+        <a href="#" class="hover:text-blue-300">About Us</a>
+        <a href="#" class="hover:text-blue-300">Contact Us</a>
+    </div>
+</div>
+
+     <!-- ✅ Book Now -->
+<div>
+    <button
+        class="w-60 bg-[url('assest/img/booknowbg.svg')] bg-no-repeat bg-contain bg-center text-white px-6 py-3 rounded-md transition"
+    >
+        Book Now
+    </button>
+</div>
+    </header>
+
+    <!-- ✅ HERO SECTION -->
+     
+<section class="py-20 px-4">
+
+<!-- expore now  -->
+
+<!-- Explore Now Card -->
+<!-- Explore Now Card -->
+<div class="relative w-[249px] h-[300px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden border-2 border-gray-100 ml-[6rem] -mt-[-5rem]">
+   
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-30 z-0 "></div>
+
+  <!-- Animated Text -->
+  <div class="absolute top-10 left-6 text-white text-3xl font-semibold z-10">
+    <span class="word delay-0">Discover</span>
+    <span class="word delay-1">Your</span>
+    <span class="word delay-2">Perfect</span>
+    <span class="word delay-3">Smile</span>
+  </div>
+
+  <!-- Button at the bottom -->
+  <div class="absolute bottom-6 left-6 z-10">
+    <button class="bg-white hover:bg-gray-100 text-black px-6 py-2 rounded-md">
+      Explore Now
+    </button>
+  </div>
+</div>
+
+
+  <!-- Text Block -->
+<div class="flex justify-end mb-10 ">
+  <div class="max-w-3xl text-left">
+    <h1 class="text-4xl font-semibold mb-6 mt-[-19rem] mr-[9rem]">
+      Providing Quality <br> 
+      Dental Care for Your <br> 
+      Family
+    </h1>
+ 
+  </div>
+</div>
+
+<!-- explore now block -->
+
+  <!-- Images Block -->
+  <div class="flex flex-col md:flex-row justify-center items-center gap-8 mt-6">
+<div class="relative w-[700px] h-[700px]">
+  <!-- Silver Tooth (Back) -->
+  <img src="assest/img/whiteteeth.svg" alt="Silver Tooth"
+       class="absolute top-[-30rem] left-[200px] h-[520px] z-0 animate-silver ml-[-15rem]">
+
+  <!-- Gold Tooth (Front) -->
+  <img src="assest/img/goldteeth.svg" alt="Gold Tooth"
+       class="absolute top-[-25rem] left-[30px] h-[500px] z-10 animate-gold ml-[-15rem]">
+</div>
+<!-- EXPLORE CARD BELOW TEETH IMAGES -->
+<div class="flex justify-center mt-[-43rem] relative z-20 ml-[-52rem]">
+  <div class="relative w-[249px] h-[300px] bg-cover bg-opacity-90 border-2 border-gray-300 rounded-xl shadow-lg overflow-hidden p-4">
+      
+
+    <!-- Dark overlay (optional for readability) -->
+    <div class="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+
+    <!-- Animated Text -->
+    <div class="absolute top-10 left-6 text-white text-2xl font-semibold z-10">
+      <span class="word delay-0">Your</span>
+      <span class="word delay-1">Dream</span>
+      <span class="word delay-2">Smile</span>
+      <span class="word delay-3">Starts</span>
+      <span class="word delay-4">Here</span>
+    </div>
+
+    <!-- Explore Now Button -->
+    <div class="absolute bottom-6 left-6 z-10">
+      <button class="bg-white hover:bg-gray-800 text-black px-6 py-2 rounded-md shadow-md">
+        Explore Now
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- image block 3 imagses  -->
+<div>
+    <img src="assest/img/boywithteeth.svg" alt="" class="absolute mt-[-30rem] ml-[7rem] img1">
+     <img src="assest/img/boyimage2.svg" alt="" class="absolute mt-[-30rem] ml-[7rem] img2">
+      <img src="assest/img/boyimag3.svg" alt="" class="absolute mt-[-30rem] ml-[7rem] img3">
+</div>
+
+  
+   
+  </div>
+</section>
+
+
+</div>
+
+
+  <!-- ✅ FOOTER -->
+  <footer class="bg-blue-900 p-6">
+    <div class="grid md:grid-cols-4 gap-12">
+      <div>
+        <h3 class="text-xl font-semibold">Toothsens</h3>
+        <p class="mt-2">Home</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold">Our Specialities</h4>
+        <p class="mt-2">Our Dental Experts</p>
+        <p>Our Happy Clients</p>
+        <p>Our Safety and Advantages</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold">About Us</h4>
+        <p class="mt-2">Contact Us</p>
+        <p>Privacy and Policy</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold">Follow Us</h4>
+        <div class="flex space-x-4 mt-2">
+          <i class="fab fa-facebook text-2xl"></i>
+          <i class="fab fa-instagram text-2xl"></i>
+          <i class="fab fa-youtube text-2xl"></i>
+          <i class="fab fa-twitter text-2xl"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="mt-12">
+      <h4 class="text-lg font-semibold">Subscribe To Our Newsletter</h4>
+      <p class="mt-2">Be the first one to know about discounts, offers, and events</p>
+      <form class="mt-4 flex justify-center items-center">
+        <input type="email" placeholder="Enter your Email" class="p-3 w-64 rounded-lg text-gray-800" />
+        <button type="submit" class="bg-indigo-500 text-white px-6 py-3 rounded-lg ml-4 hover:bg-indigo-600">Submit</button>
+      </form>
+    </div>
+
+    <div class="mt-8 text-center">&copy; Copyright Toothsens 2025</div>
+  </footer>
+
+  <!-- Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
